@@ -1,0 +1,65 @@
+import React from "react"; import { Card, CardContent } from "@/components/ui/card"; import { Button } from "@/components/ui/button";
+
+export default function BusinessWebsite() { return ( <div className="min-h-screen bg-blue-50 text-gray-900 font-sans"> {/* Navigation */} <header className="bg-white shadow p-4 flex justify-between items-center"> <div className="flex items-center space-x-2"> <img src="/logo.png" alt="Dzire Logo" className="h-10 w-auto" /> <h1 className="text-2xl font-bold text-blue-700">Dzire Menswear Outlet</h1> </div> <nav className="space-x-4"> <a href="#home" className="hover:underline text-blue-700">Home</a> <a href="#about" className="hover:underline text-blue-700">About</a> <a href="#product" className="hover:underline text-blue-700">Product</a> <a href="#contact" className="hover:underline text-blue-700">Contact</a> </nav> </header>
+
+{/* Home Section */}
+  <section id="home" className="p-10 text-center">
+    <h2 className="text-4xl font-bold mb-4 text-blue-800">Welcome to Dzire Menswear Outlet</h2>
+    <p className="text-lg max-w-xl mx-auto">
+      Discover premium imported fashion for men. Stylish, bold, and always on trend.
+    </p>
+  </section>
+
+  {/* About Section */}
+  <section id="about" className="bg-white p-10">
+    <div className="max-w-4xl mx-auto">
+      <h2 className="text-3xl font-bold mb-4 text-blue-800">About Us</h2>
+      <p>
+        Dzire Menswear Outlet brings you quality imported fashion straight from global manufacturers. Our goal is to provide top-notch menswear that reflects bold individuality and modern style.
+      </p>
+    </div>
+  </section>
+
+  {/* Product Section */}
+  <section id="product" className="p-10 bg-gray-100">
+    <div className="max-w-5xl mx-auto">
+      <h2 className="text-3xl font-bold mb-6 text-center text-blue-800">Our Products</h2>
+      <div className="grid md:grid-cols-2 gap-6">
+        <Card>
+          <CardContent className="p-4">
+            <img src="/white-tshirt.jpg" alt="White Never Broke Again T-Shirt" className="rounded mb-4" />
+            <h3 className="text-xl font-semibold mb-2">White "Never Broke Again" T-Shirt</h3>
+            <p>Imported T-Shirt, Made in China. Available in-store at Dzire Menswear Outlet.</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-4">
+            <img src="/black-tshirt.jpg" alt="Black Never Broke Again T-Shirt" className="rounded mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Black "Never Broke Again" T-Shirt</h3>
+            <p>Imported T-Shirt, Made in China. Available in-store at Dzire Menswear Outlet.</p>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  {/* Contact Section */}
+  <section id="contact" className="p-10">
+    <div className="max-w-3xl mx-auto">
+      <h2 className="text-3xl font-bold mb-4 text-blue-800">Contact Us</h2>
+      <form action="https://formspree.io/f/mwkgnovg" method="POST" className="space-y-4">
+        <input type="text" name="name" placeholder="Your Name" className="w-full p-2 border rounded" required />
+        <input type="email" name="email" placeholder="Your Email" className="w-full p-2 border rounded" required />
+        <textarea name="message" placeholder="Your Message" className="w-full p-2 border rounded h-32" required></textarea>
+        <Button type="submit">Send Message</Button>
+      </form>
+    </div>
+  </section>
+
+  <footer className="text-center p-4 bg-white border-t mt-10">
+    &copy; {new Date().getFullYear()} Dzire Menswear Outlet. All rights reserved.
+  </footer>
+</div>
+
+); }
+
